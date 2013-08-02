@@ -1,0 +1,28 @@
+//---------------------------------------------------------------------------
+
+#ifndef MainUnitH
+#define MainUnitH
+//---------------------------------------------------------------------------
+#include <System.Classes.hpp>
+#include <Vcl.Controls.hpp>
+#include <Vcl.StdCtrls.hpp>
+#include <Vcl.Forms.hpp>
+#include <Vcl.ComCtrls.hpp>
+#include <vector>
+#include "stdio.h"
+#include "stdlib.h"
+//---------------------------------------------------------------------------
+class TFormMainWindow : public TForm
+{
+__published:	// IDE-managed Components
+	TPageControl *PageControlMainWndow;
+	TTabSheet *TabSheetFIS;
+	TTabSheet *TabSheetDB;
+private:	// User declarations
+public:		// User declarations
+	__fastcall TFormMainWindow(TComponent* Owner);
+};
+//---------------------------------------------------------------------------
+extern PACKAGE TFormMainWindow *FormMainWindow;
+//---------------------------------------------------------------------------
+#endif

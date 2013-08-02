@@ -1,0 +1,11 @@
+// ---------------------------------------------------------------------------
+
+#ifndef XMLPackerH
+#define XMLPackerH
+// ---------------------------------------------------------------------------
+#include "MainUnit.h"
+
+class XMLPacker {
+	int sum(int a, int b);
+};
+#endif /* #ifndef class XMLPacker */

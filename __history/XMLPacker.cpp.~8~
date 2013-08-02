@@ -1,0 +1,31 @@
+// ---------------------------------------------------------------------------
+
+#pragma hdrstop
+
+#include "XMLPacker.h"
+// ---------------------------------------------------------------------------
+#pragma package(smart_init)
+
+int GaussJordan(std::vector<std::vector<double> > &x) {
+	if ((x.size() == 0) || (x.size() != x[0].size()))
+		return 0;
+	int size = x.size();
+	// make upper triangular matrix
+	// int m; // current first row
+	for (int m = 0; m < size; ++m) {
+		for (int i = size - 1; i >= m; --i) // first row
+				x[m][i] /= x[m][m];
+		for (int i = size - 1; i > m; --i) // rows
+			for (int j = size - 1; j >= m; --j) // columns
+					x[i][j] -= x[i][m] * x[m][j];
+	}
+	// last step
+	for (int m = size - 1; m > 0; --m) {
+		for (int i = m - 1; i >= 0; --i) {
+			double k = x[i][m];
+			for (int j = m; j >= 0; --j)
+				x[i][j] -= k * x[m][j];
+		}
+	}
+	return 1;
+}

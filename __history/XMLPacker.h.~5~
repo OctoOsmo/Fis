@@ -1,0 +1,9 @@
+//---------------------------------------------------------------------------
+#include "MainUnit.h"
+#ifndef XMLPackerH
+#define XMLPackerH
+//---------------------------------------------------------------------------
+#endif
+class XMLPacker {
+	void CreateXMLFile(const char* file_name);
+}
